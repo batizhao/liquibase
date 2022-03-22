@@ -1,0 +1,17 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet author="tom" id="20220124-003">
+        <createTable tableName="menu">
+            <column autoIncrement="true" name="id" type="BIGINT" remarks="pk">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="path" type="VARCHAR(255)" remarks="path" defaultValue="">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
